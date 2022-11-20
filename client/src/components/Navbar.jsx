@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import '../assets/Navbar.css';
+import '../assets/Styles/Navbar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import pic from '../assets/boatlogo.jpg'

@@ -2,7 +2,7 @@ import { BrowserRouter as Router,Link } from 'react-router-dom';
 import {useState} from 'react';
 import { motion } from "framer-motion"
 import { useNavigate } from 'react-router-dom';
-import '../assets/Register.css'
+import '../assets/Styles/Register.css'
 import Navbar from '../components/Navbar';
 function App() {
   const [name,setName]=useState('');

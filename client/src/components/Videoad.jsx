@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../assets/Videoad.css'
+import '../assets/Styles/Videoad.css'
 import photo1 from '../assets/videoads/videoimg1.webp'
 import photo2 from '../assets/videoads/videoimg2.webp'
 import photo3 from '../assets/videoads/videoimg3.webp'

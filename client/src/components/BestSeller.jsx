@@ -1,36 +1,42 @@
 import React, { useState } from 'react'
-import '../assets/Allitem.css'
-import photo1 from '../assets/dealsoftheday/deal1.webp'
-import photo2 from '../assets/dealsoftheday/deal2.webp'
-import photo3 from '../assets/dealsoftheday/deal3.webp'
-import photo4 from '../assets/dealsoftheday/deal4.webp'
+import '../assets/Styles/Allitem.css'
+import photo1 from '../assets/bestsellers/best1.webp'
+import photo2 from '../assets/bestsellers/best2.webp'
+import photo3 from '../assets/bestsellers/best3.webp'
+import photo4 from '../assets/bestsellers/best4.webp'
 import Axios from 'axios'
-function DealsoftheDay() {
+
+function BestSeller() {
+
+
     const photos=[
         {
             photo:photo1,
-            name:'boAt Rockerz 235 V2',
-            amount:999,
-            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_400x.png?v=1625045114"
+            name:'boAt Airdopes 131',
+            amount:1299,
+            productId:'1',
+            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569"
         },
         {
             photo:photo2,
-            name:'boAt Airdopes 101',
-            amount:1199,
-            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/101_600x.png?v=1655788494"
+            name:'boAt Airdopes 141',
+            amount:1399,
+            productId:'2',
+            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_600x.png?v=1657869596"
         },
         {
             photo:photo3,
-            name:'boAt Airdopes 141',
-            amount:1399,
-         url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_600x.png?v=1657869596"
-
+            name:'boAt Rockerz 333',
+            amount:1599,
+            productId:'3',
+            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_400x.png?v=1641801662"
         },
         {
             photo:photo4,
-            name:'boAt Storm',
-            amount:2499,
-            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_400x.png?v=1625046216"
+            name:'boAt Watch Wave Lite',
+            amount:1799,
+            productId:'4',
+            url:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782"
         },
         
     ]
@@ -40,11 +46,9 @@ function DealsoftheDay() {
   const [itemnaam,setItemnaam]=useState();
   const [itemPrice,setItemPrice]=useState();
     const [img,setImg]=useState();
-
   //Adding Item to cart:
   const addtocart=(fromname,amount,imgurl)=>{
     setImg(imgurl)
-
     setItemPrice(amount);
     setItemnaam(fromname);
     setUser(localStorage.getItem('username'))
@@ -53,14 +57,14 @@ function DealsoftheDay() {
  Axios.post('https://boatecomm1450.herokuapp.com/shop',({name:user,email:email,itemname:itemnaam,itemprice:itemPrice,imageurl:img}))
 
   }
-
+ 
 
 
 
   return (
-    <section id="dod">
-        <br/><br/>
-        <h1>Deals of The Day</h1>
+    <section id="bestsellers">
+        <br/>
+        <h1>Best Sellers</h1>
         <br/>
     <div className='main'>
         {
@@ -83,4 +87,4 @@ function DealsoftheDay() {
   )
 }
 
-export default DealsoftheDay
+export default BestSeller

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../assets/Shop.css'
+import '../assets/Styles/Shop.css'
 import {FaChevronLeft} from 'react-icons/fa'
 import {FaChevronRight} from 'react-icons/fa'
 import {AiFillHeart} from 'react-icons/ai'

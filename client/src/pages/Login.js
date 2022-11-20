@@ -1,6 +1,6 @@
 import { BrowserRouter as Router,Link } from 'react-router-dom';
 import {useState} from 'react';
-import '../assets/Login.css'
+import '../assets/Styles/Login.css'
 
 import Navbar from '../components/Navbar';
 import { motion } from "framer-motion"

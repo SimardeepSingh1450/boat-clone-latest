@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../assets/Models.css'
+import '../assets/Styles/Models.css'
 import photo1 from '../assets/Mod/m1.webp';
 import photo2 from '../assets/Mod/m2.webp';
 import photo3 from '../assets/Mod/m3.webp';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../assets/Allitem.css'
+import '../assets/Styles/Allitem.css'
 import photo1 from '../assets/heroes/dc1.webp'
 import photo2 from '../assets/heroes/dc2.webp'
 import photo3 from '../assets/heroes/dc3.webp'

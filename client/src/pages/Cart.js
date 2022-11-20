@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../assets/Maincart.css'
+import '../assets/Styles/Maincart.css'
 import Navbar from '../components/Navbar';
 import Axios from 'axios';
 import {AiFillHeart} from 'react-icons/ai'
