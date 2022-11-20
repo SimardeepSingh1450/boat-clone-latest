@@ -1,0 +1,50 @@
+.desp{
+    color:black;
+    text-shadow:none;
+}
+
+.out1{
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+}
+
+.out2{
+    margin-top: 30px;
+}
+
+.photo{
+    margin-top: 30px;
+    height: 400px;
+    margin-left: 100px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+.desp{
+    margin-top: 100px;
+    margin-left: -80px;
+}
+
+.desp1{
+    margin-top: -55px;
+    margin-right:317px;
+    color: red;
+}
+
+.desp3{
+    margin-top: -20px;
+        margin-left: 70px;
+        color: black;
+}
+
+.arrown{
+    box-shadow: 2px 2px 2px black;
+    width: 100px;
+    margin-left: 90px;
+    height: 57px;
+}
+
+.arrown:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+}

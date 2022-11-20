@@ -1,0 +1,14 @@
+exports.Photos=[
+    {
+        ph:'../assets/ShopBackPhotos/shopback1.jpg'
+    },
+    {
+        ph:'../assets/ShopBackPhotos/shopback2.jpg'
+    },
+    {
+        ph:'../assets/ShopBackPhotos/shopback3.jpg'
+    },
+    {
+        ph:'../assets/ShopBackPhotos/shopback4.gif'
+    },
+]

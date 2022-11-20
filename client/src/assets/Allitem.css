@@ -1,0 +1,71 @@
+.main{
+    width:100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.multicontainer1{
+  
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.multicontainer1:hover{
+animation:updown 2s infinite;
+}
+
+@keyframes updown{
+    100%,0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+
+.multicontainer2{
+    border-style: solid;
+    border-color: none;
+    width: 260px;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: rgb(200, 200, 200);
+}
+
+.details{
+border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+    background-color: white;
+    margin: 7px;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bttn{
+    background-color: red;
+    color:white;
+    border-style: solid;
+    border-color: red;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+h1,h3,button{
+    font-family: 'Kanit', sans-serif;
+}
+
+.bttn:hover{
+    cursor: pointer;
+}

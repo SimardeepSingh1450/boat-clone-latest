@@ -1,0 +1,38 @@
+.backimg{
+    z-index: 1;
+    width:100vw;
+    margin-top: 0px;
+    overflow-x: hidden;
+}
+
+h1{
+    color:white;
+}
+
+.arrow{
+    position: absolute;
+    z-index: 2;
+    margin-top: 138px;
+    color:rgb(248, 130, 130);
+}
+
+.arrow:hover{
+    cursor: pointer;
+    color:red;
+}
+
+main{
+    background-color: black;
+    width: 100vw;
+    justify-content: center;
+        
+}
+
+
+
+.num{
+    width: 100vw;
+    justify-content: center;
+   
+}
+
