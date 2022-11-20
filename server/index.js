@@ -13,93 +13,30 @@ require('./config/connection');//Connection to DB Established
 const usermodel=require('./model/dbschema');//Login and Register Model
 const cartmodel=require('./model/cartmodel');//Cart details model
 
+//controllers :
+const registerPOST=require('./controllers/register/registerPOST');
+const loginPOST=require('./controllers/login/loginPOST');
+const loginGET=require('./controllers/login/loginGET');
+const shopPOST=require('./controllers/shop/shopPOST');
+const cartGET=require('./controllers/cart/cartGET');
+const cartDELETE=require('./controllers/cart/cartDELETE');
 
-
-
-app.post('/api/register',async(req,res)=>{
-    try{
-        const hashedPassword=await bcrypt.hash(req.body.password,10)
-       const data=new usermodel({
-        name:req.body.name,
-        email:req.body.email,
-        password:hashedPassword
-       });
-       const result=await data.save();
-        console.log(req.body);
-        res.json({status:'ok',hashpass:hashedPassword})
-    }catch(err){
-        console.log(err);
-    }
-    
-})
-
-
-
-app.post('/api/login',async(req,res)=>{
-    try{
-      const user= await usermodel.findOne({
-        email:req.body.email,
-       })
-
-       const isPasswordValid=await bcrypt.compare(req.body.password,user.password);
-       if(isPasswordValid){
-        const token=jwt.sign({
-            name:user.name,
-            email:user.email,
-        },'secret123')
-
-    return res.json({status:'ok',user:token,username:user.name})
-       }else{
-    return res.json({status:'error',user:false})
-       }
-       
-    }catch(err){
-        console.log(err);
-    }
-})
-
-
-app.get('/api/login',async(req,res)=>{
-    try{
-    const token=req.headers['x-access-token']
-    const decoded=jwt.verify(token,'secret123')
-    const email=decoded.email
-    const user=await usermodel.findOne({email:email})
-    return {status:'ok',user:user}
-}catch(err){
-    console.log(err);
-    res.json({status:'error',error:'invalid token'})
-}
-})
+//register :
+app.post('/api/register',registerPOST);
+//login :
+app.post('/api/login',loginPOST)
+app.get('/api/login',loginGET);
 
 
 //Backend for cart:
 //Adding product to Cart:
-app.post('/shop',async(req,res)=>{
-    const data=new cartmodel({
-        username:req.body.name,
-        useremail:req.body.email,
-        itemname:req.body.itemname,
-        itemprice:req.body.itemprice,
-        url:req.body.imageurl
-    });
-    const result=await data.save();
-    res.end();
-    console.log('Result of cart is :',result);
-})
+app.post('/shop',shopPOST);
 
 //Getting cart items info:
-app.get('/cart/:email',async(req,res)=>{
-    const data=await cartmodel.find({useremail:req.params.email})
-    res.json({data:data})
-    console.log(data);
-})
+app.get('/cart/:email',cartGET);
 
 //Removing items from cart:
-app.delete('/cart/:itemname',async(req,res)=>{
-     const item=req.params.itemname;
-    await cartmodel.deleteOne({itemname:item})
-})
+app.delete('/cart/:itemname',cartDELETE);
 
 //Backend for Stripe:
 const stripe=require('stripe')("sk_test_51LMnQrSFc1BTTDVIlppweJwHRLvSN1SPivXnURW43xLQkjnSEJ5Ot6tMnx3ZD9mP2S5SMJut27QmIxCwsYbY3BeO00k0C9q4Yd")
