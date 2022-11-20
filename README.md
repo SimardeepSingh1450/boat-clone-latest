@@ -14,6 +14,7 @@
 ## How to run this Project on your Local environment ?
 
 1> Download/Clone the Repo 
+
 2> Go to the Directory of the Project consisting of two folders client and server
 
 Go to the client directory using :
