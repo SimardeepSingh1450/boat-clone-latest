@@ -12,12 +12,10 @@
 #### MongoDB , React , Express , Node , Material-UI , Figma,Stripe , Framer-Motion , JWT Auth and Stripe Payment GateWay
 
 ## How to run this Project on your Local environment ?
-```
- Download/Clone the Repo 
-```
-```
-Go to the Directory of the Project consisting of two folders client and server
-```
+
+1> Download/Clone the Repo 
+2> Go to the Directory of the Project consisting of two folders client and server
+
 Go to the client directory using :
 ```
 cd ./client 
